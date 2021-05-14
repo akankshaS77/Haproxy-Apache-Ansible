@@ -1,0 +1,11 @@
+- hosts: web
+  tasks:
+   - name: Running Apache Web Server Role
+     include_role: 
+        name: web
+
+- hosts: lb
+  tasks:
+   - name: Running Haroxy Loadbalancer Role
+     include_role:
+       name: lbrole
